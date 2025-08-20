@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+body {
+  background-image: url(../img/ymg1.png);
+  background-size: 2160px;
+}
+
+.fadeIn {
+     color: rgb(43, 255, 156);
+    font-size: 3rem;
+    text-align:  center;
+  width: 100%;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+   text-shadow:
+       3px 3px 0 #504c4c56,
+     -1px -1px 0 #504c4c56,  
+      1px -1px 0 #504c4c56,
+      -1px 1px 0 #504c4c56,
+       1px 1px 0 #504c4c56;
+}
+
+ p {
+    text-align:  center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0,0.3);
+    font-weight: 700;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width:600px){/*600px以下の画面幅だったら*/
+    .header_inner{
+        flex-direction: column;/*縦並び*/
+        align-items: center; /*中央寄せ*/
+    }
+
+    .header_inner .logo{
+        margin-top: 10px; /*余白を調整*/
+        margin-bottom: 0;
+    }
+
+}
+
+.anim-box.slidein.is-animated {
+  animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.slidein {
+  color: rgb(36, 36, 36);
+  font-size: 2rem;
+  animation: slideinLeft 3s infinite;
+}
+
+@keyframes slideinLeft {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.field {
+display: flex;
+}
+
+.footer{
+    background-color: #1f79ff;
+    width: 100%;
+    display: flex;
+    justify-content: center; /*中身を中央に*/
+    margin-top: 6px;
+    color: #d6d6d6;
+}
+
+.footer span{
+    margin: 20px;
+    font-size: 0.7rem;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.226);
+  padding-top: 5px;
+  box-sizing: border-box;
+}
+ul {
+  display: flex;
+}
+li {
+  list-style: none;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin-right: 35px;
+}
+
+a:hover {
+  color: rgb(89, 163, 197);
+}
